@@ -25,7 +25,7 @@ jobs:
       - name: Configure Git
         run: |
           git config user.name "sahilb-tech"
-          git config user.email "YOUR_GITHUB_EMAIL"
+          git config user.email "sahilbankar.tech@gamil.com"
 
       - name: Run activity bot
         run: python bot.py
