@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -33,7 +34,7 @@ jobs:
       - name: Commit changes
         run: |
           git add activity/daily.md
-          git commit -m "chore: daily activity $(date +'%Y-%m-%d')"
+          git commit -m "chore: record daily activity"
 
       - name: Push changes
         run: git push

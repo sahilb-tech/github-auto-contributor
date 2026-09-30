@@ -1,6 +1,5 @@
 from datetime import datetime
 from pathlib import Path
-import subprocess
 
 # Get the current date and time
 now = datetime.now()
@@ -19,17 +18,3 @@ with activity_file.open("a", encoding="utf-8") as file:
     file.write(activity)
 
 print(f"Activity recorded: {activity.strip()}")
-
-
-# Add the changed file to Git
-subprocess.run(["git", "add", "activity/daily.md"], check=True)
-
-# Create a Git commit
-commit_message = f"chore: record activity {now.strftime('%Y-%m-%d')}"
-
-subprocess.run(
-    ["git", "commit", "-m", commit_message],
-    check=True
-)
-
-print(f"Git commit created: {commit_message}")
