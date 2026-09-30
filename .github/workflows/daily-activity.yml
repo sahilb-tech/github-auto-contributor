@@ -24,11 +24,16 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "sahilb-tech"
-          git config user.email "sahilbankar.tech@gamil.com"
+          git config user.name "sahib-tech"
+          git config user.email "239407083+sahib-tech@users.noreply.github.com"
 
       - name: Run activity bot
         run: python bot.py
+
+      - name: Commit changes
+        run: |
+          git add activity/daily.md
+          git commit -m "chore: daily activity $(date +'%Y-%m-%d')"
 
       - name: Push changes
         run: git push
